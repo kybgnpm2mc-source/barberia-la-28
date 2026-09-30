@@ -4,761 +4,652 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>Barbería La 28 | Ojo de Agua, Tultitlán</title>
+<title>Barbería La 28</title>
 
-<meta name="description" content="Barbería La 28 en Ojo de Agua, Tultitlán. Cortes, fades, barba, ceja y servicios de imagen masculina. Agenda por WhatsApp.">
+<meta name="description" content="Barbería La 28 - Ojo de Agua, Tultitlán. Cortes, barba, ceja y estilo personalizado.">
 
 <style>
+
+@import url('https://fonts.googleapis.com/css2?family=UnifrakturCook:wght@700&family=Montserrat:wght@300;400;500;600;700;800&display=swap');
+
 *{
-  box-sizing:border-box;
-  margin:0;
-  padding:0;
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
 }
 
 html{
-  scroll-behavior:smooth;
+    scroll-behavior:smooth;
 }
 
 body{
-  font-family:Arial,Helvetica,sans-serif;
-  background:#080808;
-  color:white;
-  line-height:1.6;
+    background:#050505;
+    color:#f5f5f5;
+    font-family:'Montserrat',sans-serif;
 }
 
 a{
-  text-decoration:none;
-  color:inherit;
+    text-decoration:none;
+    color:inherit;
 }
+
+/* ---------------- HEADER ---------------- */
 
 header{
-  position:fixed;
-  top:0;
-  left:0;
-  width:100%;
-  z-index:1000;
-  background:rgba(8,8,8,.95);
-  border-bottom:1px solid #3b3015;
-}
+    min-height:100vh;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    text-align:center;
 
-nav{
-  max-width:1100px;
-  margin:auto;
-  padding:15px 20px;
-  display:flex;
-  justify-content:space-between;
-  align-items:center;
-}
+    background:
+    linear-gradient(
+        rgba(0,0,0,.70),
+        rgba(0,0,0,.94)
+    ),
+    url("imagenes/yo-cortando.jpg");
 
-.logo{
-  font-size:21px;
-  font-weight:900;
-  letter-spacing:2px;
-}
+    background-size:cover;
+    background-position:center;
 
-.logo span,
-.gold{
-  color:#d4af37;
-}
-
-.nav-links{
-  display:flex;
-  gap:25px;
-  font-size:14px;
-}
-
-.nav-links a:hover{
-  color:#d4af37;
-}
-
-.btn{
-  display:inline-block;
-  padding:13px 22px;
-  border-radius:5px;
-  font-weight:bold;
-  transition:.2s;
-}
-
-.btn-gold{
-  background:#d4af37;
-  color:#080808;
-}
-
-.btn-gold:hover{
-  background:#f0cf63;
-  transform:translateY(-2px);
-}
-
-.btn-dark{
-  border:1px solid #555;
-  background:#111;
-}
-
-.btn-dark:hover{
-  border-color:#d4af37;
-  color:#d4af37;
+    padding:30px 20px;
 }
 
 .hero{
-  min-height:100vh;
-  display:flex;
-  justify-content:center;
-  align-items:center;
-  text-align:center;
-  padding:120px 20px 70px;
-  background:
-    radial-gradient(circle at center,rgba(212,175,55,.18),transparent 42%),
-    linear-gradient(135deg,#050505,#171717,#050505);
-}
-
-.hero-content{
-  max-width:850px;
+    max-width:900px;
 }
 
 .small-title{
-  color:#f0cf63;
-  letter-spacing:4px;
-  text-transform:uppercase;
-  font-size:13px;
-  font-weight:bold;
-  margin-bottom:15px;
+    letter-spacing:5px;
+    font-size:12px;
+    color:#b9b9b9;
+    margin-bottom:20px;
+    text-transform:uppercase;
 }
 
-h1{
-  font-size:clamp(50px,10vw,100px);
-  line-height:.95;
-  letter-spacing:-4px;
+.logo{
+    font-family:'UnifrakturCook',serif;
+    font-size:clamp(60px,14vw,130px);
+    line-height:.85;
+    color:white;
+    text-shadow:0 5px 30px rgba(0,0,0,.8);
 }
 
-h1 span{
-  color:#d4af37;
+.number{
+    font-family:'Montserrat',sans-serif;
+    font-weight:800;
+    letter-spacing:10px;
+    font-size:clamp(15px,4vw,25px);
+    margin-top:18px;
+    color:#c7a94b;
 }
 
-.hero p{
-  max-width:650px;
-  margin:25px auto;
-  color:#ccc;
-  font-size:18px;
+.slogan{
+    margin:30px auto;
+    max-width:600px;
+    color:#cfcfcf;
+    font-size:16px;
+    letter-spacing:2px;
 }
 
 .buttons{
-  display:flex;
-  justify-content:center;
-  flex-wrap:wrap;
-  gap:12px;
-  margin-top:30px;
+    display:flex;
+    justify-content:center;
+    gap:12px;
+    flex-wrap:wrap;
 }
+
+.btn{
+    padding:15px 24px;
+    border:1px solid #333;
+    border-radius:4px;
+    font-size:13px;
+    font-weight:700;
+    letter-spacing:1px;
+    transition:.25s;
+}
+
+.btn-gold{
+    background:#c7a94b;
+    color:#050505;
+    border-color:#c7a94b;
+}
+
+.btn-dark{
+    background:#0d0d0d;
+}
+
+.btn:hover{
+    transform:translateY(-3px);
+}
+
+/* ---------------- SECTIONS ---------------- */
 
 section{
-  padding:90px 20px;
+    padding:90px 20px;
+    max-width:1150px;
+    margin:auto;
 }
 
-.container{
-  max-width:1100px;
-  margin:auto;
+.section-label{
+    text-align:center;
+    color:#c7a94b;
+    letter-spacing:5px;
+    font-size:11px;
+    margin-bottom:10px;
+    text-transform:uppercase;
 }
 
 .section-title{
-  text-align:center;
-  margin-bottom:45px;
+    text-align:center;
+    font-family:'UnifrakturCook',serif;
+    font-size:55px;
+    margin-bottom:45px;
 }
 
-.section-title h2{
-  font-size:38px;
+.line{
+    width:60px;
+    height:1px;
+    background:#c7a94b;
+    margin:0 auto 45px;
 }
 
-.section-title p{
-  color:#aaa;
+/* ---------------- INTRO ---------------- */
+
+.intro{
+    text-align:center;
+    max-width:750px;
+    margin:auto;
 }
 
-.gold-line{
-  width:60px;
-  height:3px;
-  background:#d4af37;
-  margin:15px auto;
+.intro p{
+    color:#aaa;
+    font-size:15px;
+    line-height:1.9;
 }
 
-.about{
-  background:#0d0d0d;
-}
-
-.about-grid{
-  display:grid;
-  grid-template-columns:1fr 1fr;
-  gap:45px;
-  align-items:center;
-}
-
-.about-text h3{
-  font-size:30px;
-  margin-bottom:15px;
-}
-
-.about-text p{
-  color:#c8c8c8;
-  margin-bottom:15px;
-}
-
-.quote{
-  border-left:3px solid #d4af37;
-  padding-left:18px;
-  margin-top:25px;
-  font-size:22px;
-  font-weight:bold;
-}
-
-.about-card{
-  background:linear-gradient(145deg,#181818,#0c0c0c);
-  border:1px solid #3b3015;
-  padding:35px;
-  border-radius:12px;
-}
-
-.about-card div{
-  margin-bottom:20px;
-}
-
-.about-card strong{
-  display:block;
-  color:#f0cf63;
-  font-size:13px;
-  text-transform:uppercase;
-  letter-spacing:1px;
-}
+/* ---------------- SERVICES ---------------- */
 
 .services{
-  display:grid;
-  grid-template-columns:repeat(3,1fr);
-  gap:18px;
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+    gap:14px;
 }
 
 .service{
-  background:#151515;
-  border:1px solid #292929;
-  padding:25px;
-  border-radius:9px;
-  transition:.25s;
+    background:#0d0d0d;
+    border:1px solid #202020;
+    padding:25px;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    transition:.2s;
 }
 
 .service:hover{
-  transform:translateY(-5px);
-  border-color:#d4af37;
-}
-
-.service-number{
-  color:#d4af37;
-  font-size:13px;
-  font-weight:bold;
+    border-color:#c7a94b;
 }
 
 .service h3{
-  margin:8px 0;
-  font-size:20px;
+    font-size:15px;
+    margin-bottom:5px;
 }
 
 .service p{
-  color:#aaa;
-  font-size:14px;
+    color:#777;
+    font-size:11px;
 }
 
 .price{
-  color:#f0cf63;
-  font-weight:bold;
-  margin-top:12px;
-  font-size:18px;
+    color:#c7a94b;
+    font-weight:700;
+    white-space:nowrap;
 }
 
-.schedule{
-  background:#0d0d0d;
+/* ---------------- FOTO PRINCIPAL ---------------- */
+
+.barber-photo{
+    width:100%;
+    max-height:650px;
+    object-fit:cover;
+    display:block;
+    border:1px solid #222;
+    filter:grayscale(10%);
 }
 
-.schedule-box{
-  max-width:650px;
-  margin:auto;
-  background:#151515;
-  border:1px solid #3b3015;
-  border-radius:10px;
-  overflow:hidden;
+/* ---------------- GALERÍA ---------------- */
+
+.gallery{
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+    gap:10px;
 }
 
-.day{
-  display:flex;
-  justify-content:space-between;
-  padding:16px 22px;
-  border-bottom:1px solid #292929;
+.gallery img{
+    width:100%;
+    aspect-ratio:1/1;
+    object-fit:cover;
+    display:block;
+    filter:grayscale(15%);
+    transition:.3s;
 }
 
-.day:last-child{
-  border-bottom:none;
+.gallery img:hover{
+    transform:scale(1.02);
+    filter:grayscale(0%);
 }
 
-.day span:last-child{
-  color:#f0cf63;
-  font-weight:bold;
+/* ---------------- INFO ---------------- */
+
+.info{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(240px,1fr));
+    gap:15px;
 }
 
-.location-grid{
-  display:grid;
-  grid-template-columns:1fr 1fr;
-  gap:30px;
+.info-box{
+    background:#0d0d0d;
+    border:1px solid #202020;
+    padding:28px;
+    text-align:center;
 }
 
-.location-card{
-  background:#151515;
-  padding:30px;
-  border-radius:10px;
-  border:1px solid #3b3015;
+.info-box h3{
+    font-size:12px;
+    letter-spacing:2px;
+    color:#c7a94b;
+    margin-bottom:12px;
 }
 
-.location-card h3{
-  color:#f0cf63;
-  margin-bottom:15px;
+.info-box p{
+    color:#aaa;
+    font-size:13px;
+    line-height:1.8;
 }
 
-.location-card p{
-  color:#bbb;
-  margin-bottom:10px;
-}
-
-.map{
-  width:100%;
-  height:320px;
-  border:0;
-  border-radius:10px;
-}
+/* ---------------- CTA ---------------- */
 
 .cta{
-  text-align:center;
-  background:
-    radial-gradient(circle,rgba(212,175,55,.15),transparent 60%),
-    #050505;
+    background:#0d0d0d;
+    border:1px solid #252525;
+    text-align:center;
+    padding:65px 25px;
 }
 
 .cta h2{
-  font-size:clamp(32px,6vw,55px);
-  margin-bottom:12px;
+    font-family:'UnifrakturCook',serif;
+    font-size:55px;
+    margin-bottom:15px;
 }
 
 .cta p{
-  color:#ccc;
-  margin-bottom:25px;
+    color:#888;
+    margin-bottom:28px;
 }
 
+/* ---------------- MAP ---------------- */
+
+.map{
+    width:100%;
+    height:380px;
+    border:0;
+    filter:grayscale(100%);
+}
+
+/* ---------------- FOOTER ---------------- */
+
 footer{
-  background:#050505;
-  padding:35px 20px;
-  text-align:center;
-  border-top:1px solid #222;
+    border-top:1px solid #1b1b1b;
+    text-align:center;
+    padding:45px 20px;
+    color:#666;
+    font-size:11px;
+    letter-spacing:1px;
 }
 
 footer strong{
-  color:#d4af37;
+    color:#c7a94b;
 }
 
-footer p{
-  color:#777;
-  font-size:13px;
-  margin-top:8px;
+/* ---------------- MOBILE ---------------- */
+
+@media(max-width:700px){
+
+    .gallery{
+        grid-template-columns:repeat(2,1fr);
+    }
+
+    .section-title{
+        font-size:45px;
+    }
+
+    .cta h2{
+        font-size:45px;
+    }
+
 }
 
-.whatsapp{
-  position:fixed;
-  right:20px;
-  bottom:20px;
-  z-index:999;
-  width:58px;
-  height:58px;
-  border-radius:50%;
-  background:#25D366;
-  color:white;
-  display:flex;
-  align-items:center;
-  justify-content:center;
-  font-size:25px;
-  font-weight:bold;
-  box-shadow:0 5px 20px rgba(0,0,0,.5);
-}
-
-@media(max-width:800px){
-
-  .nav-links{
-    display:none;
-  }
-
-  .about-grid,
-  .location-grid{
-    grid-template-columns:1fr;
-  }
-
-  .services{
-    grid-template-columns:1fr;
-  }
-
-  h1{
-    letter-spacing:-2px;
-  }
-
-  section{
-    padding:70px 18px;
-  }
-}
 </style>
 </head>
 
 <body>
 
+<!-- ================= HERO ================= -->
+
 <header>
-<nav>
 
-<a href="#inicio" class="logo">
-LA <span>28</span>
-</a>
-
-<div class="nav-links">
-<a href="#nosotros">Nosotros</a>
-<a href="#servicios">Servicios</a>
-<a href="#horarios">Horarios</a>
-<a href="#ubicacion">Ubicación</a>
-</div>
-
-<a
-class="btn btn-gold"
-href="https://wa.me/525521899291?text=Hola%20Barber%C3%ADa%20La%2028%2C%20quiero%20agendar%20una%20cita."
-target="_blank">
-Agendar
-</a>
-
-</nav>
-</header>
-
-
-<section class="hero" id="inicio">
-
-<div class="hero-content">
+<div class="hero">
 
 <div class="small-title">
-Ojo de Agua · Tultitlán
+Ojo de Agua · Tultitlán · Estado de México
 </div>
 
-<h1>
-BARBERÍA<br>
-<span>LA 28</span>
-</h1>
+<div class="logo">
+La 28
+</div>
 
-<p>
-Tu imagen habla antes que tú.
-Cortes, detalles y estilo masculino
-con atención personalizada.
+<div class="number">
+BARBERÍA
+</div>
+
+<p class="slogan">
+IMAGEN = LO MÁS IMPORTANTE.
 </p>
 
 <div class="buttons">
 
-<a
-class="btn btn-gold"
+<a class="btn btn-gold"
 href="https://wa.me/525521899291?text=Hola%20Barber%C3%ADa%20La%2028%2C%20quiero%20agendar%20una%20cita."
 target="_blank">
-📲 Agendar por WhatsApp
+
+📲 AGENDAR CITA
+
 </a>
 
-<a
-class="btn btn-dark"
-href="https://maps.app.goo.gl/CzFM4UFzD2Qj7Bze8"
+<a class="btn btn-dark"
+href="https://maps.app.goo.gl/CzFM4UFzD2Qj7Bze8?g_st=com.openai.chat.ShareExtension"
 target="_blank">
-📍 Cómo llegar
+
+📍 CÓMO LLEGAR
+
 </a>
 
 </div>
 
 </div>
 
+</header>
+
+
+<!-- ================= PRESENTACIÓN ================= -->
+
+<section>
+
+<div class="section-label">
+LA 28
+</div>
+
+<h2 class="section-title">
+El estilo habla.
+</h2>
+
+<div class="line"></div>
+
+<div class="intro">
+
+<p>
+Más que un corte, buscamos que salgas con una imagen que
+represente quién eres. Cortes personalizados, detalle,
+precisión y atención en cada servicio.
+</p>
+
+</div>
+
 </section>
 
 
-<section class="about" id="nosotros">
+<!-- ================= SERVICIOS ================= -->
 
-<div class="container">
+<section>
 
-<div class="section-title">
-<h2>Más que un corte</h2>
-<div class="gold-line"></div>
-<p>Imagen, detalle y actitud.</p>
+<div class="section-label">
+SERVICIOS
 </div>
 
-<div class="about-grid">
+<h2 class="section-title">
+Nuestros servicios
+</h2>
 
-<div class="about-text">
-
-<h3>Tu imagen es lo más importante.</h3>
-
-<p>
-En Barbería La 28 buscamos que cada cliente
-salga satisfecho con su imagen.
-</p>
-
-<p>
-Desde un fade limpio hasta los pequeños
-detalles que hacen la diferencia,
-trabajamos cada servicio de manera personalizada.
-</p>
-
-<div class="quote">
-IMAGEN = <span>LO MÁS IMPORTANTE</span>
-</div>
-
-</div>
-
-<div class="about-card">
-
-<div>
-<strong>Ubicación</strong>
-Ojo de Agua, Tultitlán, Estado de México
-</div>
-
-<div>
-<strong>Atención</strong>
-Servicio personalizado
-</div>
-
-<div>
-<strong>Citas</strong>
-WhatsApp · 55 2189 9291
-</div>
-
-<div>
-<strong>Estilo</strong>
-Urbano · Clásico · Moderno
-</div>
-
-</div>
-
-</div>
-</div>
-</section>
-
-
-<section id="servicios">
-
-<div class="container">
-
-<div class="section-title">
-
-<h2>Servicios</h2>
-
-<div class="gold-line"></div>
-
-<p>
-Elige tu servicio y agenda directamente por WhatsApp.
-</p>
-
-</div>
+<div class="line"></div>
 
 <div class="services">
 
 <div class="service">
-<div class="service-number">01</div>
+<div>
 <h3>Corte</h3>
-<p>Corte masculino, fade y estilos modernos adaptados a tu imagen.</p>
-<div class="price">$120</div>
+<p>Servicio completo</p>
+</div>
+<span class="price">$120</span>
 </div>
 
 <div class="service">
-<div class="service-number">02</div>
+<div>
 <h3>Corte + Ceja</h3>
-<p>Corte completo acompañado de definición de ceja.</p>
-<div class="price">$120</div>
+<p>Imagen completa</p>
+</div>
+<span class="price">$120</span>
 </div>
 
 <div class="service">
-<div class="service-number">03</div>
+<div>
 <h3>Ceja</h3>
-<p>Limpieza y definición de ceja masculina.</p>
-<div class="price">$20</div>
+<p>Diseño y perfilado</p>
+</div>
+<span class="price">$20</span>
 </div>
 
 <div class="service">
-<div class="service-number">04</div>
+<div>
 <h3>Barba</h3>
-<p>Perfilado y arreglo de barba.</p>
-<div class="price">$50</div>
+<p>Perfilado</p>
+</div>
+<span class="price">$50</span>
 </div>
 
 <div class="service">
-<div class="service-number">05</div>
+<div>
 <h3>Puntos negros</h3>
-<p>Limpieza facial enfocada en puntos negros e impurezas.</p>
-<div class="price">$100</div>
+<p>Limpieza facial</p>
+</div>
+<span class="price">$100</span>
 </div>
 
 <div class="service">
-<div class="service-number">06</div>
+<div>
 <h3>Grecas</h3>
-<p>Diseños personalizados para complementar tu corte.</p>
-<div class="price">$20</div>
+<p>Diseño personalizado</p>
+</div>
+<span class="price">$20</span>
 </div>
 
 <div class="service">
-<div class="service-number">07</div>
+<div>
 <h3>Textura Powder</h3>
-<p>Acabado y textura para darle mayor presencia a tu peinado.</p>
-<div class="price">$120</div>
+<p>Volumen y acabado</p>
 </div>
-
-<div class="service">
-<div class="service-number">08</div>
-<h3>Productos</h3>
-<p>Pomadas, talco y productos para complementar tu estilo.</p>
-<div class="price">Consulta disponibilidad</div>
-</div>
-
-<div class="service">
-<div class="service-number">09</div>
-<h3>Servicio personalizado</h3>
-<p>¿Buscas algo específico? Escríbenos y revisamos tu solicitud.</p>
-<div class="price">Cotiza por WhatsApp</div>
+<span class="price">$120</span>
 </div>
 
 </div>
-</div>
+
 </section>
 
 
-<section class="schedule" id="horarios">
+<!-- ================= FOTO TUYA ================= -->
 
-<div class="container">
+<section>
 
-<div class="section-title">
+<div class="section-label">
+THE BARBER
+</div>
 
-<h2>Horarios</h2>
+<h2 class="section-title">
+Detrás de La 28
+</h2>
 
-<div class="gold-line"></div>
+<div class="line"></div>
+
+<img
+src="imagenes/yo-cortando.jpg"
+alt="Barbero de Barbería La 28 trabajando"
+class="barber-photo"
+>
+
+</section>
+
+
+<!-- ================= GALERÍA ================= -->
+
+<section>
+
+<div class="section-label">
+PORTAFOLIO
+</div>
+
+<h2 class="section-title">
+Nuestros trabajos
+</h2>
+
+<div class="line"></div>
+
+<div class="gallery">
+
+<img src="imagenes/corte1.jpg" alt="Corte Barbería La 28">
+<img src="imagenes/corte2.jpg" alt="Corte Barbería La 28">
+<img src="imagenes/corte3.jpg" alt="Corte Barbería La 28">
+<img src="imagenes/corte4.jpg" alt="Corte Barbería La 28">
+<img src="imagenes/corte5.jpg" alt="Corte Barbería La 28">
+<img src="imagenes/corte6.jpg" alt="Corte Barbería La 28">
+
+</div>
+
+</section>
+
+
+<!-- ================= HORARIOS ================= -->
+
+<section>
+
+<div class="section-label">
+INFORMACIÓN
+</div>
+
+<h2 class="section-title">
+Visítanos
+</h2>
+
+<div class="line"></div>
+
+<div class="info">
+
+<div class="info-box">
+
+<h3>HORARIOS</h3>
 
 <p>
-Consulta disponibilidad antes de acudir.
+Lunes: Previa cita<br>
+Martes a sábado: 9:30 AM – 6:00 PM<br>
+Domingo: 9:30 AM – 4:00 PM
 </p>
 
 </div>
 
-<div class="schedule-box">
 
-<div class="day">
-<span>Lunes</span>
-<span>Por cita</span>
-</div>
+<div class="info-box">
 
-<div class="day">
-<span>Martes</span>
-<span>9:30 AM – 6:00 PM</span>
-</div>
-
-<div class="day">
-<span>Miércoles</span>
-<span>9:30 AM – 6:00 PM</span>
-</div>
-
-<div class="day">
-<span>Jueves</span>
-<span>9:30 AM – 6:00 PM</span>
-</div>
-
-<div class="day">
-<span>Viernes</span>
-<span>9:30 AM – 6:00 PM</span>
-</div>
-
-<div class="day">
-<span>Sábado</span>
-<span>9:30 AM – 6:00 PM</span>
-</div>
-
-<div class="day">
-<span>Domingo</span>
-<span>9:30 AM – 4:00 PM</span>
-</div>
-
-</div>
-
-</div>
-</section>
-
-
-<section id="ubicacion">
-
-<div class="container">
-
-<div class="section-title">
-
-<h2>Encuéntranos</h2>
-
-<div class="gold-line"></div>
+<h3>UBICACIÓN</h3>
 
 <p>
-Ojo de Agua, Tultitlán, Estado de México.
-</p>
-
-</div>
-
-<div class="location-grid">
-
-<div class="location-card">
-
-<h3>📍 Barbería La 28</h3>
-
-<p>
-Cda. Valle 28<br>
 Ojo de Agua<br>
-Buenavista<br>
 Tultitlán, Estado de México
 </p>
 
+</div>
+
+
+<div class="info-box">
+
+<h3>CONTACTO</h3>
+
 <p>
-<strong>WhatsApp:</strong><br>
+WhatsApp<br>
 55 2189 9291
 </p>
 
-<br>
+</div>
 
-<a
-class="btn btn-gold"
-href="https://maps.app.goo.gl/CzFM4UFzD2Qj7Bze8"
+</div>
+
+</section>
+
+
+<!-- ================= CITA ================= -->
+
+<section>
+
+<div class="cta">
+
+<h2>
+Reserva tu lugar.
+</h2>
+
+<p>
+Agenda directamente por WhatsApp.
+</p>
+
+<a class="btn btn-gold"
+href="https://wa.me/525521899291?text=Hola%20Barber%C3%ADa%20La%2028%2C%20quiero%20agendar%20una%20cita."
 target="_blank">
-Abrir Google Maps
+
+📲 WHATSAPP
+
 </a>
 
 </div>
 
-<div>
+</section>
+
+
+<!-- ================= MAPA ================= -->
+
+<section>
+
+<div class="section-label">
+LOCATION
+</div>
+
+<h2 class="section-title">
+Encuéntranos
+</h2>
+
+<div class="line"></div>
 
 <iframe
 class="map"
-src="https://www.google.com/maps?q=Barber%C3%ADa%20La%2028%2C%20Ojo%20de%20Agua%2C%20Tultitl%C3%A1n%2C%20Estado%20de%20M%C3%A9xico&output=embed"
-loading="lazy"
-allowfullscreen=""
-referrerpolicy="no-referrer-when-downgrade">
+src="https://www.google.com/maps?q=Ojo%20de%20Agua%2C%20Tultitl%C3%A1n%2C%20Estado%20de%20M%C3%A9xico&output=embed"
+loading="lazy">
 </iframe>
 
-</div>
+<br><br>
 
-</div>
+<div style="text-align:center;">
 
-</div>
-</section>
-
-
-<section class="cta">
-
-<div class="container">
-
-<h2>¿Listo para cambiar tu imagen?</h2>
-
-<p>
-Agenda tu cita directamente por WhatsApp.
-</p>
-
-<a
-class="btn btn-gold"
-href="https://wa.me/525521899291?text=Hola%20Barber%C3%ADa%20La%2028%2C%20quiero%20agendar%20una%20cita."
+<a class="btn btn-gold"
+href="https://maps.app.goo.gl/CzFM4UFzD2Qj7Bze8?g_st=com.openai.chat.ShareExtension"
 target="_blank">
-📲 AGENDAR CITA
+
+📍 ABRIR EN GOOGLE MAPS
+
 </a>
 
 </div>
@@ -766,32 +657,23 @@ target="_blank">
 </section>
 
 
+<!-- ================= FOOTER ================= -->
+
 <footer>
 
+<p>
 <strong>BARBERÍA LA 28</strong>
-
-<p>
-Ojo de Agua · Tultitlán · Estado de México
 </p>
 
-<p>
-WhatsApp: 55 2189 9291
+<p style="margin-top:8px;">
+IMAGEN = LO MÁS IMPORTANTE.
 </p>
 
-<p>
+<p style="margin-top:18px;">
 © 2026 Barbería La 28
 </p>
 
 </footer>
-
-
-<a
-class="whatsapp"
-href="https://wa.me/525521899291?text=Hola%20Barber%C3%ADa%20La%2028%2C%20quiero%20agendar%20una%20cita."
-target="_blank"
-aria-label="Contactar por WhatsApp">
-☎
-</a>
 
 </body>
 </html>
