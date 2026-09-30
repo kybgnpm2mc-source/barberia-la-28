@@ -1,0 +1,797 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Barbería La 28 | Ojo de Agua, Tultitlán</title>
+
+<meta name="description" content="Barbería La 28 en Ojo de Agua, Tultitlán. Cortes, fades, barba, ceja y servicios de imagen masculina. Agenda por WhatsApp.">
+
+<style>
+*{
+  box-sizing:border-box;
+  margin:0;
+  padding:0;
+}
+
+html{
+  scroll-behavior:smooth;
+}
+
+body{
+  font-family:Arial,Helvetica,sans-serif;
+  background:#080808;
+  color:white;
+  line-height:1.6;
+}
+
+a{
+  text-decoration:none;
+  color:inherit;
+}
+
+header{
+  position:fixed;
+  top:0;
+  left:0;
+  width:100%;
+  z-index:1000;
+  background:rgba(8,8,8,.95);
+  border-bottom:1px solid #3b3015;
+}
+
+nav{
+  max-width:1100px;
+  margin:auto;
+  padding:15px 20px;
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+}
+
+.logo{
+  font-size:21px;
+  font-weight:900;
+  letter-spacing:2px;
+}
+
+.logo span,
+.gold{
+  color:#d4af37;
+}
+
+.nav-links{
+  display:flex;
+  gap:25px;
+  font-size:14px;
+}
+
+.nav-links a:hover{
+  color:#d4af37;
+}
+
+.btn{
+  display:inline-block;
+  padding:13px 22px;
+  border-radius:5px;
+  font-weight:bold;
+  transition:.2s;
+}
+
+.btn-gold{
+  background:#d4af37;
+  color:#080808;
+}
+
+.btn-gold:hover{
+  background:#f0cf63;
+  transform:translateY(-2px);
+}
+
+.btn-dark{
+  border:1px solid #555;
+  background:#111;
+}
+
+.btn-dark:hover{
+  border-color:#d4af37;
+  color:#d4af37;
+}
+
+.hero{
+  min-height:100vh;
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  text-align:center;
+  padding:120px 20px 70px;
+  background:
+    radial-gradient(circle at center,rgba(212,175,55,.18),transparent 42%),
+    linear-gradient(135deg,#050505,#171717,#050505);
+}
+
+.hero-content{
+  max-width:850px;
+}
+
+.small-title{
+  color:#f0cf63;
+  letter-spacing:4px;
+  text-transform:uppercase;
+  font-size:13px;
+  font-weight:bold;
+  margin-bottom:15px;
+}
+
+h1{
+  font-size:clamp(50px,10vw,100px);
+  line-height:.95;
+  letter-spacing:-4px;
+}
+
+h1 span{
+  color:#d4af37;
+}
+
+.hero p{
+  max-width:650px;
+  margin:25px auto;
+  color:#ccc;
+  font-size:18px;
+}
+
+.buttons{
+  display:flex;
+  justify-content:center;
+  flex-wrap:wrap;
+  gap:12px;
+  margin-top:30px;
+}
+
+section{
+  padding:90px 20px;
+}
+
+.container{
+  max-width:1100px;
+  margin:auto;
+}
+
+.section-title{
+  text-align:center;
+  margin-bottom:45px;
+}
+
+.section-title h2{
+  font-size:38px;
+}
+
+.section-title p{
+  color:#aaa;
+}
+
+.gold-line{
+  width:60px;
+  height:3px;
+  background:#d4af37;
+  margin:15px auto;
+}
+
+.about{
+  background:#0d0d0d;
+}
+
+.about-grid{
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:45px;
+  align-items:center;
+}
+
+.about-text h3{
+  font-size:30px;
+  margin-bottom:15px;
+}
+
+.about-text p{
+  color:#c8c8c8;
+  margin-bottom:15px;
+}
+
+.quote{
+  border-left:3px solid #d4af37;
+  padding-left:18px;
+  margin-top:25px;
+  font-size:22px;
+  font-weight:bold;
+}
+
+.about-card{
+  background:linear-gradient(145deg,#181818,#0c0c0c);
+  border:1px solid #3b3015;
+  padding:35px;
+  border-radius:12px;
+}
+
+.about-card div{
+  margin-bottom:20px;
+}
+
+.about-card strong{
+  display:block;
+  color:#f0cf63;
+  font-size:13px;
+  text-transform:uppercase;
+  letter-spacing:1px;
+}
+
+.services{
+  display:grid;
+  grid-template-columns:repeat(3,1fr);
+  gap:18px;
+}
+
+.service{
+  background:#151515;
+  border:1px solid #292929;
+  padding:25px;
+  border-radius:9px;
+  transition:.25s;
+}
+
+.service:hover{
+  transform:translateY(-5px);
+  border-color:#d4af37;
+}
+
+.service-number{
+  color:#d4af37;
+  font-size:13px;
+  font-weight:bold;
+}
+
+.service h3{
+  margin:8px 0;
+  font-size:20px;
+}
+
+.service p{
+  color:#aaa;
+  font-size:14px;
+}
+
+.price{
+  color:#f0cf63;
+  font-weight:bold;
+  margin-top:12px;
+  font-size:18px;
+}
+
+.schedule{
+  background:#0d0d0d;
+}
+
+.schedule-box{
+  max-width:650px;
+  margin:auto;
+  background:#151515;
+  border:1px solid #3b3015;
+  border-radius:10px;
+  overflow:hidden;
+}
+
+.day{
+  display:flex;
+  justify-content:space-between;
+  padding:16px 22px;
+  border-bottom:1px solid #292929;
+}
+
+.day:last-child{
+  border-bottom:none;
+}
+
+.day span:last-child{
+  color:#f0cf63;
+  font-weight:bold;
+}
+
+.location-grid{
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:30px;
+}
+
+.location-card{
+  background:#151515;
+  padding:30px;
+  border-radius:10px;
+  border:1px solid #3b3015;
+}
+
+.location-card h3{
+  color:#f0cf63;
+  margin-bottom:15px;
+}
+
+.location-card p{
+  color:#bbb;
+  margin-bottom:10px;
+}
+
+.map{
+  width:100%;
+  height:320px;
+  border:0;
+  border-radius:10px;
+}
+
+.cta{
+  text-align:center;
+  background:
+    radial-gradient(circle,rgba(212,175,55,.15),transparent 60%),
+    #050505;
+}
+
+.cta h2{
+  font-size:clamp(32px,6vw,55px);
+  margin-bottom:12px;
+}
+
+.cta p{
+  color:#ccc;
+  margin-bottom:25px;
+}
+
+footer{
+  background:#050505;
+  padding:35px 20px;
+  text-align:center;
+  border-top:1px solid #222;
+}
+
+footer strong{
+  color:#d4af37;
+}
+
+footer p{
+  color:#777;
+  font-size:13px;
+  margin-top:8px;
+}
+
+.whatsapp{
+  position:fixed;
+  right:20px;
+  bottom:20px;
+  z-index:999;
+  width:58px;
+  height:58px;
+  border-radius:50%;
+  background:#25D366;
+  color:white;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  font-size:25px;
+  font-weight:bold;
+  box-shadow:0 5px 20px rgba(0,0,0,.5);
+}
+
+@media(max-width:800px){
+
+  .nav-links{
+    display:none;
+  }
+
+  .about-grid,
+  .location-grid{
+    grid-template-columns:1fr;
+  }
+
+  .services{
+    grid-template-columns:1fr;
+  }
+
+  h1{
+    letter-spacing:-2px;
+  }
+
+  section{
+    padding:70px 18px;
+  }
+}
+</style>
+</head>
+
+<body>
+
+<header>
+<nav>
+
+<a href="#inicio" class="logo">
+LA <span>28</span>
+</a>
+
+<div class="nav-links">
+<a href="#nosotros">Nosotros</a>
+<a href="#servicios">Servicios</a>
+<a href="#horarios">Horarios</a>
+<a href="#ubicacion">Ubicación</a>
+</div>
+
+<a
+class="btn btn-gold"
+href="https://wa.me/525521899291?text=Hola%20Barber%C3%ADa%20La%2028%2C%20quiero%20agendar%20una%20cita."
+target="_blank">
+Agendar
+</a>
+
+</nav>
+</header>
+
+
+<section class="hero" id="inicio">
+
+<div class="hero-content">
+
+<div class="small-title">
+Ojo de Agua · Tultitlán
+</div>
+
+<h1>
+BARBERÍA<br>
+<span>LA 28</span>
+</h1>
+
+<p>
+Tu imagen habla antes que tú.
+Cortes, detalles y estilo masculino
+con atención personalizada.
+</p>
+
+<div class="buttons">
+
+<a
+class="btn btn-gold"
+href="https://wa.me/525521899291?text=Hola%20Barber%C3%ADa%20La%2028%2C%20quiero%20agendar%20una%20cita."
+target="_blank">
+📲 Agendar por WhatsApp
+</a>
+
+<a
+class="btn btn-dark"
+href="https://maps.app.goo.gl/CzFM4UFzD2Qj7Bze8"
+target="_blank">
+📍 Cómo llegar
+</a>
+
+</div>
+
+</div>
+
+</section>
+
+
+<section class="about" id="nosotros">
+
+<div class="container">
+
+<div class="section-title">
+<h2>Más que un corte</h2>
+<div class="gold-line"></div>
+<p>Imagen, detalle y actitud.</p>
+</div>
+
+<div class="about-grid">
+
+<div class="about-text">
+
+<h3>Tu imagen es lo más importante.</h3>
+
+<p>
+En Barbería La 28 buscamos que cada cliente
+salga satisfecho con su imagen.
+</p>
+
+<p>
+Desde un fade limpio hasta los pequeños
+detalles que hacen la diferencia,
+trabajamos cada servicio de manera personalizada.
+</p>
+
+<div class="quote">
+IMAGEN = <span>LO MÁS IMPORTANTE</span>
+</div>
+
+</div>
+
+<div class="about-card">
+
+<div>
+<strong>Ubicación</strong>
+Ojo de Agua, Tultitlán, Estado de México
+</div>
+
+<div>
+<strong>Atención</strong>
+Servicio personalizado
+</div>
+
+<div>
+<strong>Citas</strong>
+WhatsApp · 55 2189 9291
+</div>
+
+<div>
+<strong>Estilo</strong>
+Urbano · Clásico · Moderno
+</div>
+
+</div>
+
+</div>
+</div>
+</section>
+
+
+<section id="servicios">
+
+<div class="container">
+
+<div class="section-title">
+
+<h2>Servicios</h2>
+
+<div class="gold-line"></div>
+
+<p>
+Elige tu servicio y agenda directamente por WhatsApp.
+</p>
+
+</div>
+
+<div class="services">
+
+<div class="service">
+<div class="service-number">01</div>
+<h3>Corte</h3>
+<p>Corte masculino, fade y estilos modernos adaptados a tu imagen.</p>
+<div class="price">$120</div>
+</div>
+
+<div class="service">
+<div class="service-number">02</div>
+<h3>Corte + Ceja</h3>
+<p>Corte completo acompañado de definición de ceja.</p>
+<div class="price">$120</div>
+</div>
+
+<div class="service">
+<div class="service-number">03</div>
+<h3>Ceja</h3>
+<p>Limpieza y definición de ceja masculina.</p>
+<div class="price">$20</div>
+</div>
+
+<div class="service">
+<div class="service-number">04</div>
+<h3>Barba</h3>
+<p>Perfilado y arreglo de barba.</p>
+<div class="price">$50</div>
+</div>
+
+<div class="service">
+<div class="service-number">05</div>
+<h3>Puntos negros</h3>
+<p>Limpieza facial enfocada en puntos negros e impurezas.</p>
+<div class="price">$100</div>
+</div>
+
+<div class="service">
+<div class="service-number">06</div>
+<h3>Grecas</h3>
+<p>Diseños personalizados para complementar tu corte.</p>
+<div class="price">$20</div>
+</div>
+
+<div class="service">
+<div class="service-number">07</div>
+<h3>Textura Powder</h3>
+<p>Acabado y textura para darle mayor presencia a tu peinado.</p>
+<div class="price">$120</div>
+</div>
+
+<div class="service">
+<div class="service-number">08</div>
+<h3>Productos</h3>
+<p>Pomadas, talco y productos para complementar tu estilo.</p>
+<div class="price">Consulta disponibilidad</div>
+</div>
+
+<div class="service">
+<div class="service-number">09</div>
+<h3>Servicio personalizado</h3>
+<p>¿Buscas algo específico? Escríbenos y revisamos tu solicitud.</p>
+<div class="price">Cotiza por WhatsApp</div>
+</div>
+
+</div>
+</div>
+</section>
+
+
+<section class="schedule" id="horarios">
+
+<div class="container">
+
+<div class="section-title">
+
+<h2>Horarios</h2>
+
+<div class="gold-line"></div>
+
+<p>
+Consulta disponibilidad antes de acudir.
+</p>
+
+</div>
+
+<div class="schedule-box">
+
+<div class="day">
+<span>Lunes</span>
+<span>Por cita</span>
+</div>
+
+<div class="day">
+<span>Martes</span>
+<span>9:30 AM – 6:00 PM</span>
+</div>
+
+<div class="day">
+<span>Miércoles</span>
+<span>9:30 AM – 6:00 PM</span>
+</div>
+
+<div class="day">
+<span>Jueves</span>
+<span>9:30 AM – 6:00 PM</span>
+</div>
+
+<div class="day">
+<span>Viernes</span>
+<span>9:30 AM – 6:00 PM</span>
+</div>
+
+<div class="day">
+<span>Sábado</span>
+<span>9:30 AM – 6:00 PM</span>
+</div>
+
+<div class="day">
+<span>Domingo</span>
+<span>9:30 AM – 4:00 PM</span>
+</div>
+
+</div>
+
+</div>
+</section>
+
+
+<section id="ubicacion">
+
+<div class="container">
+
+<div class="section-title">
+
+<h2>Encuéntranos</h2>
+
+<div class="gold-line"></div>
+
+<p>
+Ojo de Agua, Tultitlán, Estado de México.
+</p>
+
+</div>
+
+<div class="location-grid">
+
+<div class="location-card">
+
+<h3>📍 Barbería La 28</h3>
+
+<p>
+Cda. Valle 28<br>
+Ojo de Agua<br>
+Buenavista<br>
+Tultitlán, Estado de México
+</p>
+
+<p>
+<strong>WhatsApp:</strong><br>
+55 2189 9291
+</p>
+
+<br>
+
+<a
+class="btn btn-gold"
+href="https://maps.app.goo.gl/CzFM4UFzD2Qj7Bze8"
+target="_blank">
+Abrir Google Maps
+</a>
+
+</div>
+
+<div>
+
+<iframe
+class="map"
+src="https://www.google.com/maps?q=Barber%C3%ADa%20La%2028%2C%20Ojo%20de%20Agua%2C%20Tultitl%C3%A1n%2C%20Estado%20de%20M%C3%A9xico&output=embed"
+loading="lazy"
+allowfullscreen=""
+referrerpolicy="no-referrer-when-downgrade">
+</iframe>
+
+</div>
+
+</div>
+
+</div>
+</section>
+
+
+<section class="cta">
+
+<div class="container">
+
+<h2>¿Listo para cambiar tu imagen?</h2>
+
+<p>
+Agenda tu cita directamente por WhatsApp.
+</p>
+
+<a
+class="btn btn-gold"
+href="https://wa.me/525521899291?text=Hola%20Barber%C3%ADa%20La%2028%2C%20quiero%20agendar%20una%20cita."
+target="_blank">
+📲 AGENDAR CITA
+</a>
+
+</div>
+
+</section>
+
+
+<footer>
+
+<strong>BARBERÍA LA 28</strong>
+
+<p>
+Ojo de Agua · Tultitlán · Estado de México
+</p>
+
+<p>
+WhatsApp: 55 2189 9291
+</p>
+
+<p>
+© 2026 Barbería La 28
+</p>
+
+</footer>
+
+
+<a
+class="whatsapp"
+href="https://wa.me/525521899291?text=Hola%20Barber%C3%ADa%20La%2028%2C%20quiero%20agendar%20una%20cita."
+target="_blank"
+aria-label="Contactar por WhatsApp">
+☎
+</a>
+
+</body>
+</html>
